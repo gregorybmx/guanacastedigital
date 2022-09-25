@@ -1,9 +1,8 @@
+import UserRegister from './components/userRegisterComponent'
 
 function App() {
   return (
-    <div className="container">
-      <h1 className="text-success">Hola mundo</h1>
-    </div>
+   <UserRegister></UserRegister>
   );
 }
 
