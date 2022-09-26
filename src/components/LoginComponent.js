@@ -22,8 +22,6 @@ const Login = () => {
         } else {
             setMensajeEmail(true)
         }
-
-        console.log(mensajeEmail);
     }
 
 return (

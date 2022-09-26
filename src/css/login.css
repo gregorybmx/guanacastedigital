@@ -49,9 +49,9 @@
     padding-bottom: 20px;
 }
 
-.pwd-icon:hover{
+.pwd-icon:hover {
     color: rgb(155, 148, 148);
-    cursor:pointer ;
+    cursor: pointer;
 }
 
 .custom-control {
@@ -74,13 +74,16 @@
     color: #167bff;
 }
 
-.btn-form
-{
+.btn-form {
     width: 55%;
     font-weight: bold;
 }
 
-.alt-login-metod-line{
+.btn-form:disabled {
+    background-color: grey;
+}
+
+.alt-login-metod-line {
     height: 2px;
     background: #000000;
     border-radius: 15px;
@@ -88,21 +91,21 @@
 }
 
 
-.logo-fb{
+.logo-fb {
     margin: 5px;
     color: #1877F2;
 }
 
-.logo-fb:hover{
+.logo-fb:hover {
     color: #86b0e7;
     cursor: pointer;
 }
 
-.g-logo{
+.g-logo {
     margin: 5px;
     color: #F34632;
 }
 
-.g-logo:hover{
+.g-logo:hover {
     color: #e79289;
 }
