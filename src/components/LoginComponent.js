@@ -5,7 +5,6 @@ import { FiMail } from 'react-icons/fi'
 import { FaKey } from 'react-icons/fa'
 import { ImGoogle3 } from 'react-icons/im'
 import { FaFacebook } from 'react-icons/fa'
-import ButtonComponent from './ButtonComponent';
 
 import logo from '../img/gd_logo.png'
 
@@ -100,12 +99,12 @@ return (
                 </div>
 
                 <div className="d-block text-center m-auto">
-                    <ButtonComponent
+                    <button
                         type="submit"
                         className="btn btn-primary btn-form"
-                        disable = {mensajeEmail}
-                        content='INGRESAR'>
-                    </ButtonComponent>
+                        disabled = {mensajeEmail}>
+                            INGRESAR
+                    </button>
                 </div>
 
                 <div className='mt-3'>
