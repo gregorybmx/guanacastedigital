@@ -4,7 +4,8 @@ const ButtonComponent = (props) => {
     return (
         <button
             type={props.type}
-            className={props.className}>
+            className={props.className}
+            disabled={props.disable}>
             {props.content}
         </button>
     )
