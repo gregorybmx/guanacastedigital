@@ -1,8 +1,10 @@
-
+import React from "react"
+import Cards from "./testData/cards"
+import "./css/cards.css"
 function App() {
   return (
-    <div className="container">
-      <h1 className="text-success">Hola mundo</h1>
+    <div className="Card">
+      <Cards/>
     </div>
   );
 }
