@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import validator from 'validator'
 import { BiHide, BiShow } from 'react-icons/bi';
 import { FiMail } from 'react-icons/fi'
@@ -14,6 +15,12 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
+    const navigate = useNavigate();
+
+    const registerLink = () => {
+        navigate("registro");
+    }
+
     const validarEmail = (e) => {
         var email = e.target.value
 
@@ -24,128 +31,133 @@ const Login = () => {
         }
     }
 
-return (
-    <div className="login-wrapper">
-        <div className="login-wrapper-content">
-            <form>
+    return (
+        <div className="login-wrapper">
 
-                <div id='gdLogo'>
-                    <img src={logo} className="d-block w-100 mb-3" alt='logotipo de Guanacaste Digital' />
-                </div>
+            <div className="login-wrapper-content">
 
-                <div className='title-underline text-center mb-3'></div>
+                <form>
 
-                <div className='form-control mb-3'>
-
-                    <div className='position-absolute pointer d-inline-flex mt-1 mr-1'>
-                        <h3><FiMail /></h3>
-                    </div>
-                    <input
-                        type="email"
-                        className='form-control d-inline-flex text-field'
-                        placeholder='Correo Electrónico'
-                        data-toggle='tooltip'
-                        tooltiptext="Ingrese su correo electrónico"
-                        onChange={(e) => validarEmail(e)}
-                    />
-                </div>
-
-                <div className='form-control mb-3'>
-
-                    <div className='position-absolute pointer pwd-icon d-inline-flex mt-1 ml-1'>
-                        <h3><FaKey /></h3>
+                    <div id='gdLogo'>
+                        <img src={logo} className="d-block w-75 m-auto" alt='logotipo de Guanacaste Digital' />
                     </div>
 
-                    <input
-                        type={showPassword ? "text" : "password"}
-                        className='form-control d-inline-flex text-field'
-                        placeholder='Contraseña'
-                        data-toggle='tooltip'
-                        tooltiptext="Ingrese su contraseña"
-                    />
+                    <div className='title-underline text-center mb-3 mt-3'></div>
 
-                    <div className='position-absolute pointer pwd-icon d-inline-flex mt-1 mr-1' onClick={() => setShowPassword(!showPassword)}>
-                        {showPassword ? <h3><BiShow /></h3> : <h3><BiHide /></h3>}
-                    </div>
+                    <div className='form-control mb-3'>
 
-                </div>
-
-                <p className='forgot-password text-center'>
-                    <a
-                        href="forgotpwd "
-                        data-toggle='tooltip'
-                        title="Haga clic aqui para recuperar su contraseña"
-                    >¿OLVIDASTE TU CONTRASEÑA?</a>
-                </p>
-
-                <div className='mb-3'>
-                    <div className='custom-control custom-checkbox mt-2'>
+                        <div className='position-absolute pointer d-inline-flex mt-1 me-1'>
+                            <h3><FiMail /></h3>
+                        </div>
                         <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheck1"
+                            type="email"
+                            className='form-control d-inline-flex text-field'
+                            placeholder='Correo Electrónico'
+                            data-toggle='tooltip'
+                            tooltiptext="Ingrese su correo electrónico"
+                            onChange={(e) => validarEmail(e)}
+                        />
+                    </div>
+
+                    <div className='form-control mb-3'>
+
+                        <div className='position-absolute pointer pwd-icon d-inline-flex mt-1 me-1'>
+                            <h3><FaKey /></h3>
+                        </div>
+
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            className='form-control d-inline-flex text-field'
+                            placeholder='Contraseña'
+                            data-toggle='tooltip'
+                            tooltiptext="Ingrese su contraseña"
                         />
 
-                        <label
-                            className="custom-control-label"
-                            htmlFor="customCheck1"
-                            data-toggle='tooltip'
-                            title="Seleccione esta opcion si desea recordar sus datos">
-                            RECORDAR CUENTA
-                        </label>
-                    </div>
-                </div>
-
-                <div className="d-block text-center m-auto">
-                    <button
-                        type="submit"
-                        className="btn btn-primary btn-form"
-                        disabled = {mensajeEmail}>
-                            INGRESAR
-                    </button>
-                </div>
-
-                <div className='mt-3'>
-
-                    <div className='d-flex justify-content-around'>
-
-                        <div className='alt-login-metod-line text-center m-auto'></div>
-
-                        <p className='m-auto'>O INICIA SESIÓN CON</p>
-
-                        <div className='alt-login-metod-line text-center m-auto'></div>
+                        <div className='position-absolute pointer pwd-icon d-inline-flex mt-1 me-1' onClick={() => setShowPassword(!showPassword)}>
+                            {showPassword ? <h3><BiShow /></h3> : <h3><BiHide /></h3>}
+                        </div>
 
                     </div>
 
-                    <div className='d-flex justify-content-center'>
-
-                        <a
-                            className='logo-fb'
-                            href='fb'
+                    <p className='forgot-password text-center'>
+                        <button
+                            className='btn-link'
                             data-toggle='tooltip'
-                            title='Iniciar sesión con Facebook'><h1><FaFacebook /></h1></a>
-
-                        <a className='g-logo'
-                            href='google'
-                            data-toggle='tooltip'
-                            title='Iniciar sesión con Google'><h1><ImGoogle3 /></h1></a>
-                    </div>
-
-                    <p className='text-center'>
-                        ¿Aún no estas registrado?
-                        <a
-                            href="registro"
-                            data-toggle='tooltip'
-                            title="Haga clic aqui para registrarte">
-                            Regístrate
-                        </a>
+                            title="Haga clic aqui para recuperar su contraseña"
+                        >¿OLVIDASTE TU CONTRASEÑA?</button>
                     </p>
 
-                </div>
+                    <div className='mb-3'>
+                        <div className='custom-control custom-checkbox mt-2'>
+                            <input
+                                type="checkbox"
+                                className="custom-control-input"
+                                id="customCheck1"
+                            />
 
-            </form>
+                            <label
+                                className="custom-control-label"
+                                htmlFor="customCheck1"
+                                data-toggle='tooltip'
+                                title="Seleccione esta opcion si desea recordar sus datos">
+                                RECORDAR CUENTA
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className="d-block text-center m-auto">
+                        <button
+                            type="submit"
+                            className="btn btn-primary btn-form"
+                            disabled={mensajeEmail}>
+                            INGRESAR
+                        </button>
+                    </div>
+
+                    <div className='mt-3'>
+
+                        <div className='d-flex justify-content-around'>
+
+                            <div className='alt-login-metod-line text-center m-auto'></div>
+
+                            <p className='m-auto'>O INICIA SESIÓN CON</p>
+
+                            <div className='alt-login-metod-line text-center m-auto'></div>
+
+                        </div>
+
+                        <div className='d-flex justify-content-center'>
+
+                            <button
+                                className='logo-fb btn-link'
+                                href='fb'
+                                data-toggle='tooltip'
+                                title='Iniciar sesión con Facebook'><h1><FaFacebook /></h1></button>
+
+                            <button className='g-logo btn-link'
+                                href='google'
+                                data-toggle='tooltip'
+                                title='Iniciar sesión con Google'><h1><ImGoogle3 /></h1></button>
+                        </div>
+
+                        <p className='text-center'>
+                            ¿Aún no estas registrado?
+                            <button
+                                className='btn-link'
+                                onClick={registerLink}
+                                data-toggle='tooltip'
+                                title="Haga clic aqui para registrarte">
+                                Regístrate
+                            </button>
+                        </p>
+
+                    </div>
+
+                </form>
+
+            </div>
+
         </div>
-    </div>
-)
+    )
 }
 export default Login

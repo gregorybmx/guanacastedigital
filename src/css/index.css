@@ -43,3 +43,14 @@ html,
   width: 100%;
   height: 100%;
 }
+
+.btn-link
+{
+    background: rgba(255, 255, 255, 0);
+    border: none;    
+    color: blue;
+}
+
+.btn-link:hover{
+    text-decoration: underline;
+}
