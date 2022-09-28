@@ -1,9 +1,15 @@
-
+import NavbarComponent from "./components/NavbarComponent";
+import FooterComponent from "./components/FooterComponent";
+import CardComponent from "./components/CardComponent";
 function App() {
   return (
-    <div className="container">
-      <h1 className="text-success">Hola mundo</h1>
-    </div>
+
+      <div>
+      <NavbarComponent />
+
+      <FooterComponent />
+      </div>
+
   );
 }
 

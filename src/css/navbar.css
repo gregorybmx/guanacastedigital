@@ -1,0 +1,30 @@
+.navbar{
+    background-color: #445054;
+    position:fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index: 9999;
+
+  
+}
+
+.container-fluid .logo{
+ margin-right: 30px; 
+
+}
+.btn{
+    color: white;
+}
+.nav-link{
+   color: white; 
+}
+.nav-link:hover{
+    background-color:#81888a;
+    border-radius: 5px;
+    color:white;
+
+}
+ .collapse .navbar-collapse{
+    width: 20px;
+}
