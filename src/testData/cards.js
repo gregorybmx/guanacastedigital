@@ -8,21 +8,26 @@ const Cards= [
     {
         id:1,
         title: "Taladro",
+        category: "Ferreteria",
         image: taladro,
         text: "Taladro Marca Drill",
-        url: "http://taladro.com",
+        textM: "Super Taladro Especial",
+        textM2: "A la venta a precio reducido. Local guapo de bajos precios"
+        
     },
     {
         id: 2,
-        title: "hamburguesa",
+        title: "Hamburguesa",
+        category: "Comida",
         image: hamburguesa,
-        url: "http://hamburguesa.com",
+        
     },
     {
         id:3,
         title: "Xbox Series X",
+        category: "Videojuegos",
         image: xbox,
-        url: "http://xbox.com",
+        
     },
 ]
 
@@ -33,7 +38,7 @@ function cards() {
             {
                 Cards.map(card => (
                     <div className="col-md-4" key ={card.id}>
-                        <CardComponent title={card.title} imageSource={card.image} url={card.url} text = {card.text}/>
+                        <CardComponent title={card.title} category={card.category} imageSource={card.image} text = {card.text} textN ={card.textM} textN2 ={card.textM2}/>
                     </div>
                 ))
             }
