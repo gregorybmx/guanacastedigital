@@ -1,30 +1,24 @@
-.navbar{
+.navbar {
     background-color: #445054;
-    position:fixed;
+    position:fixed !important;
     top: 0;
     left:0;
     width: 100%;
     z-index: 9999;
-
-  
+    font-family: "roboto";
 }
 
 .container-fluid .logo{
  margin-right: 30px; 
 
 }
-.btn{
-    color: white;
-}
-.nav-link{
-   color: white; 
-}
 .nav-link:hover{
     background-color:#81888a;
     border-radius: 5px;
-    color:white;
+    color:white !important;
 
 }
  .collapse .navbar-collapse{
     width: 20px;
 }
+
