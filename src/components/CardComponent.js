@@ -55,8 +55,8 @@ function CardComponent({ title, category, imageSource, text, textM, textM2 }) {
                 textM2 ? textM2 : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
               }
             </p>
-
-          </Box>
+            <button type="button" className="btn-close" onClick={handleClose} aria-label="Cerrar"></button>
+          </Box>          
         </Modal>
 
       </div>
