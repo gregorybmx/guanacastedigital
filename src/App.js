@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/LoginComponent';
 import UserRegister from './pages/UserRegister'
+import UserConfiguration from './pages/userConfiguration'
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
 import Cards from "./testData/cards"
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<UserRegister />} />
           <Route path="/home" element={<Cards/>} />
+          <Route path="/configuracionUsuario" element={<UserConfiguration/>}/>
         </Routes>
         <FooterComponent />
       </div>

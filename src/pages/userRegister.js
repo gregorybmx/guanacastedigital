@@ -39,7 +39,7 @@ const UserRegister = () => {
                                 <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Correo Electrónico" />
                             </div>
 
-                            <input className="mb-3 form-control" type="text" placeholder="Número de Telefono" aria-label="default input example"></input>
+                            <input className="mb-3 form-control" type="number" placeholder="Número de Telefono" aria-label="default input example"></input>
 
                             <div className="mb-3  d-flex justify-content-around">
                                 <select className="form-select me-2" id="floatingSelectC" aria-label="FloatingLabel">
