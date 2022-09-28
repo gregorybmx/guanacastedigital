@@ -5,7 +5,7 @@ const DinamicModalComponent = (props) => {
     <div>
       {/* <!-- Button trigger modal --> */}
       <button type="button" className={props.class} data-bs-toggle="modal" data-bs-target="#dinamicModal">
-        {props.title}
+        {props.button}
       </button>
 
       {/* <!-- Modal --> */}

@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css/animate.min.css';
 import './css/index.css';
-import "./css/cards.css"
+import './css/login.css'
+import './css/userForm.css'
+import './css/cards.css'
 import './css/footer.css';
 import './css/navbar.css';
-import './css/login.css'
 import './css/userForm.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';

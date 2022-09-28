@@ -39,7 +39,7 @@ const UserRegister = () => {
                                 <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Correo Electrónico" />
                             </div>
 
-                            <input className="mb-3 form-control" type="text" placeholder="Número de Telefono" aria-label="default input example"></input>
+                            <input className="mb-3 form-control" type="number" placeholder="Número de Telefono" aria-label="default input example"></input>
 
                             <div className="mb-3  d-flex justify-content-around">
                                 <select className="form-select me-2" id="floatingSelectC" aria-label="FloatingLabel">
@@ -104,8 +104,9 @@ const UserRegister = () => {
                             <div className='d-flex justify-content-center'>
                                 <DinamicModalComponent
                                 class='btn btn-link'
+                                button = 'TÉRMINOS Y CONDICIONES'
                                 title = 'TÉRMINOS Y CONDICIONES'
-                                content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                                content = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." 
                                 ></DinamicModalComponent>
                             </div>
                         </div>
