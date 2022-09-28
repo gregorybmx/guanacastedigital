@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "../css/cards.css"
+import ModalComponent from './DinamicModalComponent'
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 
@@ -25,8 +26,12 @@ function CardComponent ({title, category, imageSource, text, textM, textM2}) {
             text ? text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
           }
         </p>
-          <a onClick={handleOpen} className="btn btn-outline-secondary rounded-0" target = "_blank">
-            Mostrar Información
+
+          
+
+          <button onClick={handleOpen} className="btn btn-outline-secondary rounded-0" target = "_blank">
+            Mostrar Información</button>
+            
           <Modal
             open={open}
               onClose={handleClose}
@@ -43,10 +48,10 @@ function CardComponent ({title, category, imageSource, text, textM, textM2}) {
               textM2 ? textM2 : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
             }
           </p>
-          <button type = "botton" className="btn-close" data-bs-dimiss="modal" aria-label="Cerrar"></button>
+          <button type="button" className="btn btn-secondary" onClick={handleClose}>Cerrar</button>
         </Box>
           </Modal>
-          </a>
+          
       </div>
     </div>
   )

@@ -1,8 +1,6 @@
 import React from 'react'
 
-
-
-const userConfiguration = () => {
+const UserConfiguration = () => {
     return (
 
         <div className='m-3'>
@@ -131,5 +129,5 @@ const userConfiguration = () => {
     )
 }
 
-export default userConfiguration
+export default UserConfiguration
 
