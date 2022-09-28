@@ -18,12 +18,13 @@ const userRegister = () => {
                         <div className='rectangle text-center mb-3'>
                             Registrate
                         </div>
-                        <div className="mb-3">
-                            <input type="text" className="form-control" placeholder="Nombre" aria-label="First name" />
-                        </div>
-
-                        <div className="mb-3">
-                            <input type="text" className="form-control" placeholder="Apellidos" aria-label="Last name" />
+                        <div className="row mb-3">
+                            <div className="col">
+                                <input typ="text" className="form-control" placeholder="Nombre" aria-label="First name" />
+                            </div>
+                            <div className="col">
+                                <input type="text" className="form-control" placeholder="Apellidos" aria-label="Last name" />
+                            </div>
                         </div>
                         <div className="mb-3">
                             <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu Correo Electronico" />
