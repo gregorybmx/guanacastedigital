@@ -1,74 +1,50 @@
-const cards = [
+import React from 'react'
+import CardComponent from '../components/CardComponent'
+import taladro from '../img/taladro.jpg'
+import hamburguesa from '../img/hamburguesa.jpg'
+import xbox from '../img/xbox.png'
+
+const Cards= [
     {
-        url: "#",
-        title: "Taladro Marca Drill",
-        thumbnail: "../../images/taladro.jpg",
+        id:1,
+        title: "Taladro",
         category: "Ferreteria",
-        description: "Este es un taladro marca drill, pocas unidades disponibles",
-        price: "30.000",
-    }, 
-
+        image: taladro,
+        text: "Taladro Marca Drill",
+        textM: "Super Taladro Especial",
+        textM2: "A la venta a precio reducido. Local guapo de bajos precios"
+        
+    },
     {
-        url: "#",
+        id: 2,
         title: "Hamburguesa",
-        thumbnail: "../../images/hamburguesa.jpg",
         category: "Comida",
-        description: "Todo tipo de comida rapida",
-        price: "1.500",
+        image: hamburguesa,
+        
     },
-
     {
-        url: "#",
-        title: "Pulseras",
-        thumbnail: "../../images/bisuteria.jpg",
-        category: "Bisuteria",
-        description: "Pulseras de todos los colores y tipos",
-        price: "1.500",
-    },
-
-    {
-        url: "#",
+        id:3,
         title: "Xbox Series X",
-        thumbnail: "../../images/xbox.png",
         category: "Videojuegos",
-        description: "Xbox Series X Nuevo",
-        price: "400.000",
+        image: xbox,
+        
     },
+]
 
-    {
-        url: "#",
-        title: "Comida para Perros",
-        thumbnail: "../../images/comidaPerros.png",
-        category: "Animales",
-        description: "Comida para perros Marca Hills",
-        price: "5.500",
-    },
+function cards() {
+  return (
+    <div className="container d-flex justify-content-center align-items-center h-100">
+        <div className="row">
+            {
+                Cards.map(card => (
+                    <div className="col-md-4" key ={card.id}>
+                        <CardComponent title={card.title} category={card.category} imageSource={card.image} text = {card.text} textN ={card.textM} textN2 ={card.textM2}/>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+  )
+}
 
-    {
-        url: "#",
-        title: "Tres Leches",
-        thumbnail: "../../images/tres leches.jpg",
-        category: "Comida",
-        description: "Rico tres leches",
-        price: "3.000",
-    },
-
-    {
-        url: "#",
-        title: "Lizano",
-        thumbnail: "../../images/lizano.jpg",
-        category: "Abarrotes",
-        description: "Lizano salsa rosada",
-        price: "1.300",
-    },
-
-    {
-        url: "#",
-        title: "Licores",
-        thumbnail: "../../images/jagermeister.jpg",
-        category: "Licores",
-        description: "Jagermeister con caja",
-        price: "10.000",
-    },
-];
-export default cards;
+export default cards

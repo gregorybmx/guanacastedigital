@@ -7,7 +7,7 @@ import { FaFacebook } from 'react-icons/fa'
 
 import logo from '../img/gd_logo.png'
 
-const userRegister = () => {
+const UserRegister = () => {
 
     const navigate = useNavigate();
 
@@ -116,4 +116,4 @@ const userRegister = () => {
     )
 }
 
-export default userRegister
+export default UserRegister
