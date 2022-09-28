@@ -1,11 +1,11 @@
 import React from 'react'
-import '../css/navbar.css';
+
 import { FiShoppingCart } from "react-icons/fi";
 
 function NavbarComponent() {
   return (
  
-    <nav className="navbar navbar-expand-lg bg-green mb-4"  >
+    <nav className="navbar navbar-expand-lg bg-green "  >
     <div className="container-fluid">
         <div className="logo">
           <img src='./gd_logo.png' width='150px'  alt=''/>
