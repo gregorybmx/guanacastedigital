@@ -5,8 +5,7 @@
     left: 0;
     width: 100%;
     z-index: 9999;
-
-
+    font-family: "roboto";
 }
 
 .container-fluid .logo {
@@ -14,18 +13,10 @@
 
 }
 
-.btn {
-    color: white;
-}
-
-.nav-link {
-    color: white;
-}
-
 .nav-link:hover {
     background-color: #81888a;
     border-radius: 5px;
-    color: white;
+    color: white !important;
 
 }
 
