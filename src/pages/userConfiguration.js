@@ -5,53 +5,57 @@ import React from 'react'
 const userConfiguration = () => {
     return (
 
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
+        <div className='m-3'>
+            <div className="user-wrapper">
+                <div className="user-wrapper-content">
+
+                <div className='m-3 text-center'>Configuración de Usuarios</div>
+
+        <div className="accordion" id="accordionExample">
+            <div className="accordion-item">
+                <h2 className="accordion-header" id="headingOne">
+                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Actualiza tus Datos
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <form>
-                        <div className="mb-3">
-                            <div className="row mb-3">
-                                <div className="col">
-                                    <input typ="text" className="form-control" placeholder="Nombre" aria-label="First name" />
-                                </div>
-                                <div className="col">
-                                    <input type="text" className="form-control" placeholder="Apellidos" aria-label="Last name" />
-                                </div>
+
+                        <div className="mb-3 mt-3">
+                            <div className='title-underline text-center mb-3'>
                             </div>
+                            <div className="mb-3 d-flex justify-content-around">
+                                <input type="text" className="form-control me-2" placeholder="Nombre" aria-label="First name" />
+                                <input type="text" className="form-control" placeholder="Apellidos" aria-label="Last name" />
+                            </div>
+
                             <div className="mb-3">
-                                <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu Correo Electronico" />
+                                <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Correo Electrónico" />
                             </div>
 
-                            <input className="mb-3 form-control" type="text" placeholder="Ingresa tu Numero de Telefono" aria-label="default input example"></input>
+                            <input className="mb-3 form-control" type="number" placeholder="Número de Telefono" aria-label="default input example"></input>
 
-                            <div className="mb-3 form-floating">
-                                <select className="form-select" id="floatingSelectC" aria-label="FloatingLabel">
-                                    <option default value="Elegir canton">Selecciona tu Canton</option>
+                            <div className="mb-3  d-flex justify-content-around">
+                                <select className="form-select me-2" id="floatingSelectC" aria-label="FloatingLabel">
+                                    <option default value="Elija su cantón">Selecciona tu Cantón</option>
                                     <option value="1">Liberia</option>
                                     <option value="2">Cañas</option>
                                     <option value="3">Bagaces</option>
                                 </select>
-                            </div>
 
-                            <div className="mb-3 form-floating">
                                 <select className="form-select" id="floatingSelectD" aria-label="FloatingLabel">
-                                    <option default value="Elegir Distrito">Selecciona tu Distrito</option>
+                                    <option default value="Elija su Distrito">Selecciona tu Distrito</option>
                                     <option value="1">Liberia</option>
                                     <option value="2">...</option>
                                 </select>
                             </div>
 
                             <div className="mb-3">
-                                <input type="text" className="form-control" id="inputAddress" placeholder="Ingresa tu Direccion de Facturacion" />
+                                <input type="text" className="form-control" id="inputAddress" placeholder="Ingrese su Direccion de Facturacion" />
                             </div>
 
                             <div className="mb-3">
-                                <input type="password" className="form-control" placeholder="Ingresa tu Contraseña" />
+                                <input type="password" className="form-control" placeholder="Contraseña" />
                             </div>
 
                             <div className="mb-3">
@@ -59,38 +63,71 @@ const userConfiguration = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="btn btn-primary">Registrar</button>
+                        <div className="text-center m-auto d-flex justify-content-center">
 
-                        <button type="button" className="btn btn-danger">Cancelar</button>
+                            <button type="submit" className="btn btn-reg btn-primary me-5">Actualizar</button>
 
+                            <button type="button" className="btn btn-reg btn-danger">Cancelar</button>
+
+                        </div>
+
+                        <div className='mt-3'></div>
                     </form>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Accordion Item #2
+            <div className="accordion-item">
+                <h2 className="accordion-header" id="headingTwo">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Registro de Pedidos
                     </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
+                <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <table className="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Numero de Pedido</th>
+                                <th scope="col">Fecha del Pedido</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Monto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>27/9/2022</td>
+                                <td>Completado</td>
+                                <td>75000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>27/9/2022</td>
+                                <td>Completado</td>
+                                <td>45000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>27/9/2022</td>
+                                <td>Rechazado</td>
+                                <td>20000</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Accordion Item #3
+            <div className="accordion-item">
+                <h2 className="accordion-header" id="headingThree">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Productos Favoritos
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
+                <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+
                 </div>
             </div>
         </div>
+                </div >
+            </div>
+        </div >
     )
 }
 
