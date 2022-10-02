@@ -1,6 +1,6 @@
 .navbar {
     background-color: #445054;
-    position: fixed !important;
+    position: sticky !important;
     top: 0;
     left: 0;
     width: 100%;

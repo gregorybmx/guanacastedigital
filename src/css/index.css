@@ -7,21 +7,19 @@
 body {
   font-family: 'Roboto';
 
-  background: hsla(147, 45%, 55%, 1);
+  background: hsla(182, 95%, 38%, 1);
 
-  background: linear-gradient(0deg, hsla(147, 45%, 55%, 1) 0%, hsla(148, 49%, 83%, 1) 100%);
-
-  background: -moz-linear-gradient(0deg, hsla(147, 45%, 55%, 1) 0%, hsla(148, 49%, 83%, 1) 100%);
-
-  background: -webkit-linear-gradient(0deg, hsla(147, 45%, 55%, 1) 0%, hsla(148, 49%, 83%, 1) 100%);
-
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#59C087", endColorstr="#BEE9D2", GradientType=1);
-
+  background: radial-gradient(circle, hsla(182, 95%, 38%, 1) 0%, hsla(182, 100%, 35%, 1) 0%, hsla(184, 15%, 81%, 1) 100%);
+  
+  background: -moz-radial-gradient(circle, hsla(182, 95%, 38%, 1) 0%, hsla(182, 100%, 35%, 1) 0%, hsla(184, 15%, 81%, 1) 100%);
+  
+  background: -webkit-radial-gradient(circle, hsla(182, 95%, 38%, 1) 0%, hsla(182, 100%, 35%, 1) 0%, hsla(184, 15%, 81%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#05B9BF", endColorstr="#00ACB3", GradientType=1 );
 
   min-height: 100vh;
   display: flex;
   font-weight: 400;
-  font-family: system-ui, 'Roboto';
 }
 
 h1,
@@ -44,13 +42,17 @@ html,
   height: 100%;
 }
 
-.btn-link
-{
-    background: rgba(255, 255, 255, 0);
-    border: none;    
-    color: blue;
+.btn-link {
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  color: blue;
 }
 
-.btn-link:hover{
-    text-decoration: underline;
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.container {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
