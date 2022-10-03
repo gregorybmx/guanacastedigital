@@ -1,8 +1,29 @@
 .footer {
     background-color:#577E8D;
-    padding:15px;
+    padding: 15px;
     font-family: 'Roboto';
+    bottom: 0px  !important ;
+    width: 100%;
+    position:relative;
+    left: 0px;
+    
+
+
+
+    
 }
-.text-footer{
-    color:white;
+
+@media all and  (max-width: 800px){
+
+    .footer{
+     padding:0px;
+     margin:0;
+     bottom: 0px;
+     position: fixed;
+    }
 }
+
+
+    
+
+

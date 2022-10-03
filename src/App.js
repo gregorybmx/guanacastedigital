@@ -12,15 +12,23 @@ function App() {
   return (
     <Router>
       <div className="App">
+
         <NavbarComponent />
+
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+      
+        <Route exact path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<UserRegister />} />
           <Route path="/home" element={<Home/>} />
           <Route path="/configuracionUsuario" element={<UserConfiguration/>}/>
+        
         </Routes>
+
+
+
         <FooterComponent />
+
       </div>
     </Router>
   );

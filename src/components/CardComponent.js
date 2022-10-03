@@ -32,7 +32,7 @@ function CardComponent({ title, category, imageSource, text, textM, textM2 }) {
         <h4 className="card-title">{title}</h4>
         <p className='card-text text-secondary '>
           {
-            text ? text : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            text ? text : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
           }
         </p>
         <button onClick={handleOpen} className="btn btn-outline-secondary rounded-0 text-white rounded-1 bg-secondary" target="_blank">       Mostrar Información </button>
@@ -61,6 +61,8 @@ function CardComponent({ title, category, imageSource, text, textM, textM2 }) {
 
       </div>
     </div >
+
+
   )
 }
 CardComponent.propTypes = {

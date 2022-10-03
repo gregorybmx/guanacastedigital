@@ -32,6 +32,7 @@ const Login = () => {
     }
 
     return (
+    
         <div className="login-wrapper">
 
             <div className="login-wrapper-content">
@@ -158,6 +159,7 @@ const Login = () => {
             </div>
 
         </div>
+
     )
 }
 export default Login
