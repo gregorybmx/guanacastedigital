@@ -38,13 +38,13 @@ const NavbarComponent = () => {
           </ul>
           < ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link  text-white" color="white" onClick={loginLink}>Iniciar Sesion</a>
+              <button className="nav-link  text-white" color="white" onClick={loginLink}>Iniciar Sesion</button>
   </li>
   <li className="nav-item" >
-    <a className="nav-link text-white" onClick={registerLink} >Registrarse</a>
+    <button className="nav-link text-white" onClick={registerLink} >Registrarse</button>
   </li>
   <li className="nav-item">
-    <a className="nav-link text-white " href="#"><FiShoppingCart /></a>
+    <button className="nav-link text-white " href="#"><FiShoppingCart /></button>
   </li>
           </ul >
         </div >

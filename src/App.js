@@ -18,7 +18,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/registro" element={<UserRegister />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/userconfiguration" element={<UserConfiguration />} />
+            <Route path="/configuracionusuario" element={<UserConfiguration />} />
           </Routes>
         </div>
         <FooterComponent />
