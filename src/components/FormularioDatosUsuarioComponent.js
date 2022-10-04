@@ -55,4 +55,4 @@ const FormularioDatosUsuarioComponent = (props) => {
     )
 }
 
-export default FormularioDatosUsuarioComponent
+export default FormularioDatosUsuarioComponent   

@@ -17,6 +17,7 @@ const UserRegister = () => {
     }
 
     return (
+   
         <div className='m-3'>
             <div className="wrapper">
                 <div className="wrapper-content">
@@ -66,6 +67,7 @@ const UserRegister = () => {
                 </div >
             </div>
         </div >
+
     )
 }
 
