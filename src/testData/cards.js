@@ -16,7 +16,7 @@ const Cards = [
         title: "Taladro",
         category: "Ferreteria",
         image: taladro,
-        text: "Taladro Marca Drill",
+ 
         textM: "Super Taladro Especial",
         textM2: "A la venta a precio reducido. Local guapo de bajos precios"
 

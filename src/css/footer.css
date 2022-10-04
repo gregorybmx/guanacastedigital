@@ -1,0 +1,14 @@
+.footer {
+    position: static !important;
+    background-color: #577E8D;
+    width: 100%;
+    padding: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 0%;
+    font-family: 'Roboto';    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
