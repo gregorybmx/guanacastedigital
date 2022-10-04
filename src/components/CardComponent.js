@@ -28,7 +28,7 @@ function CardComponent({ title, category, imageSource, text, textM, textM2 }) {
         <ModalComponent
         classButton='btn btn-outline-secondary rounded-0 text-white rounded-1 bg-secondary mt-4'
         textButton = 'Mostrar Información'
-        img = {<img src={imageSource} className="card-img-top-2 mb-5 w-100" ></img>}
+        img = {<img src={imageSource} className="card-img-top-2 mb-5 w-100" alt='Imagen Card'></img>}
         title = {textM ? textM : "Lorem Ipsum."}
         content = {textM2 ? textM2 : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "}>
         </ModalComponent>

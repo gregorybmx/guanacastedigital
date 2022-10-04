@@ -16,6 +16,11 @@
 
 }
 
+.nav-link{
+    background: rgba(255, 255, 255, 0);
+    border: none;
+}
+
 .nav-link:hover {
     background-color: #81888a;
     border-radius: 5px;
