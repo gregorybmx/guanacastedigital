@@ -18,7 +18,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const registerLink = () => {
-        navigate("registro");
+        navigate("/registro");
     }
 
     const validarEmail = (e) => {
@@ -32,9 +32,9 @@ const Login = () => {
     }
 
     return (
-        <div className="login-wrapper">
+        <div className="wrapper">
 
-            <div className="login-wrapper-content">
+            <div className="wrapper-content">
 
                 <form>
 
@@ -158,6 +158,7 @@ const Login = () => {
             </div>
 
         </div>
+
     )
 }
 export default Login

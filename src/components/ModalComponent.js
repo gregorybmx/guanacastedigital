@@ -3,6 +3,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { BsFillSuitHeartFill } from "react-icons/bs";
+
+
 
 const style = {
     position: 'absolute',
@@ -10,18 +13,18 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'background.paper',
+    bgcolor: '#FFEBCD',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
 };
 
 const ModalComponent = (props) => {
-    
+
     const [open, setOpen] = React.useState(false);
-    
+
     const handleOpen = () => setOpen(true);
-    
+
     const handleClose = () => setOpen(false);
 
     return (
@@ -36,7 +39,7 @@ const ModalComponent = (props) => {
 
                 <Box sx={style}>
 
-                    <button type="button" className="btn-close float-end" onClick={handleClose} aria-label="Cerrar"></button>
+                    <button type="button" className="btn-close float-end mb-2" onClick={handleClose} aria-label="Cerrar"></button>
                     {props.img}
                     <Typography id="modal-modal-title" variant="h6" component="h2">
                         {props.title}
@@ -45,8 +48,13 @@ const ModalComponent = (props) => {
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                         {props.content}
                     </Typography>
+
+                    <button className='btn btn-danger  border-0 float-end'><BsFillSuitHeartFill /></button>
+
                 </Box>
+
             </Modal>
+
         </div>
     )
 }

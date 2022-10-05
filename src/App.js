@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/LoginComponent';
+import Login from './pages/Login';
 import UserRegister from './pages/UserRegister'
 import UserConfiguration from './pages/UserConfiguration'
 import NavbarComponent from "./components/NavbarComponent";
@@ -11,6 +11,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+
         <NavbarComponent />
         <div className="container">
           <Routes>
@@ -18,10 +19,11 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/registro" element={<UserRegister />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/userconfiguration" element={<UserConfiguration />} />
+            <Route path="/configuracionusuario" element={<UserConfiguration />} />
           </Routes>
         </div>
         <FooterComponent />
+
       </div>
     </Router>
   );

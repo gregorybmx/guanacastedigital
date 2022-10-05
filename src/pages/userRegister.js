@@ -17,9 +17,10 @@ const UserRegister = () => {
     }
 
     return (
+   
         <div className='m-3'>
-            <div className="user-wrapper">
-                <div className="user-wrapper-content">
+            <div className="wrapper">
+                <div className="wrapper-content">
 
                     <div id='gdLogo'>
                         <img src={logo} className="d-block w-75 m-auto" alt='logotipo de Guanacaste Digital' />
@@ -66,6 +67,7 @@ const UserRegister = () => {
                 </div >
             </div>
         </div >
+
     )
 }
 

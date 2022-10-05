@@ -6,11 +6,19 @@
     width: 100%;
     z-index: 9999;
     font-family: "roboto";
+
+
 }
+
 
 .container-fluid .logo {
     margin-right: 30px;
 
+}
+
+.nav-link{
+    background: rgba(255, 255, 255, 0);
+    border: none;
 }
 
 .nav-link:hover {
