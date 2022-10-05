@@ -18,7 +18,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const registerLink = () => {
-        navigate("registro");
+        navigate("/registro");
     }
 
     const validarEmail = (e) => {

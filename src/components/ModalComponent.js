@@ -20,11 +20,11 @@ const style = {
 };
 
 const ModalComponent = (props) => {
-    
+
     const [open, setOpen] = React.useState(false);
-    
+
     const handleOpen = () => setOpen(true);
-    
+
     const handleClose = () => setOpen(false);
 
     return (
@@ -40,21 +40,21 @@ const ModalComponent = (props) => {
                 <Box sx={style}>
 
                     <button type="button" className="btn-close float-end mb-2" onClick={handleClose} aria-label="Cerrar"></button>
-                     {props.img} 
+                    {props.img}
                     <Typography id="modal-modal-title" variant="h6" component="h2">
                         {props.title}
                     </Typography>
 
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                         {props.content}
-                    </Typography> 
+                    </Typography>
 
-                    <button className='btn btn-danger  border-0 float-end'><BsFillSuitHeartFill/></button>
+                    <button className='btn btn-danger  border-0 float-end'><BsFillSuitHeartFill /></button>
 
                 </Box>
-         
+
             </Modal>
-        
+
         </div>
     )
 }
