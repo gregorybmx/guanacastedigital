@@ -71,4 +71,3 @@ const UserConfiguration = () => {
 }
 
 export default UserConfiguration
-
