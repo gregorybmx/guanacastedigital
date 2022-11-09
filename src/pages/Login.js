@@ -5,7 +5,9 @@ import { BiHide, BiShow } from 'react-icons/bi';
 import { FiMail } from 'react-icons/fi'
 import { FaKey } from 'react-icons/fa'
 import { ImGoogle3 } from 'react-icons/im'
-import { FaFacebook } from 'react-icons/fa'
+import FbLoginBtn from '../components/FbLoginBtn';
+
+import * as storage from '../utils/storage';
 
 import logo from '../img/gd_logo.png'
 
@@ -14,6 +16,14 @@ const Login = () => {
     const [mensajeEmail, setMensajeEmail] = useState(true)
 
     const [showPassword, setShowPassword] = useState(false);
+
+    const [user, setUser] = useState(null);
+
+
+    const onLogin = (user) => {
+        storage.setUser(user);
+        setUser(user);
+    };
 
     const navigate = useNavigate();
 
@@ -128,11 +138,7 @@ const Login = () => {
 
                         <div className='d-flex justify-content-center'>
 
-                            <button
-                                className='logo-fb btn-link'
-                                href='fb'
-                                data-toggle='tooltip'
-                                title='Iniciar sesión con Facebook'><h1><FaFacebook /></h1></button>
+                            <FbLoginBtn onLogin={onLogin}/>
 
                             <button className='g-logo btn-link'
                                 href='google'
