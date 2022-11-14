@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 import validator from 'validator'
 import { BiHide, BiShow } from 'react-icons/bi';
@@ -6,6 +6,8 @@ import { FiMail } from 'react-icons/fi'
 import { FaKey } from 'react-icons/fa'
 import { ImGoogle3 } from 'react-icons/im'
 import { FaFacebook } from 'react-icons/fa'
+import GoogleLogin from 'react-google-login'
+import {gapi} from 'gapi-script'
 
 import logo from '../img/gd_logo.png'
 
@@ -30,6 +32,18 @@ const Login = () => {
             setMensajeEmail(true)
         }
     }
+
+    const responseGoogle=(responseGoogle)=>{
+        console.log(responseGoogle)
+        console.log(responseGoogle.profileObj);
+    }
+   const clientId="162039051456-g9nbfjffu5kn60flevj4prnjgc445b5g.apps.googleusercontent.com"
+    useEffect(()=>{
+        gapi.load("client:auth2",()=>{
+            gapi.auth2.init({clientId:clientId});
+        })
+    },[])
+
 
     return (
         <div className="wrapper">
@@ -137,7 +151,16 @@ const Login = () => {
                             <button className='g-logo btn-link'
                                 href='google'
                                 data-toggle='tooltip'
-                                title='Iniciar sesión con Google'><h1><ImGoogle3 /></h1></button>
+                                title='Iniciar sesión con Google'><h1><ImGoogle3 />  </h1>                                
+                            </button>
+                            <div className='login'>
+                            <GoogleLogin 
+                                clientId={clientId}
+                                onSuccess={responseGoogle}
+                                onFailure={responseGoogle}
+                                cookiePolicy={'single_host_origin'} 
+                                />
+                            </div>
                         </div>
 
                         <p className='text-center'>
