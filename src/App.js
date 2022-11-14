@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import UserRegister from './pages/UserRegister'
 import UserConfiguration from './pages/UserConfiguration'
-import ProdcutRegister from "./pages/ProductRegister";
+import CategoryRegister from "./pages/CategoryRegister";
+import CategoryList from "./pages/CategoryList";
+import ProductRegister from "./pages/ProductRegister";
 import ProductList from "./pages/ProductList";
 import BusinessPartnersConfiguration from './pages/businessPartnersConfiguration'
 import DeliveryPartnersConfiguration from "./pages/deliveryPartnersConfiguration";
@@ -33,8 +35,10 @@ function App() {
             <Route path="/versocioc" element={<BusinessPViewTools />} />
             <Route path="/versocior" element={<DeliveryPViewTools />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/registrocategoria" element={<CategoryRegister/>} />
+            <Route path="/listacategorias" element={<CategoryList/>} />
             <Route path="/configuracionusuario" element={<UserConfiguration />} />
-            <Route path="/registroproductos" element={<ProdcutRegister/>} />
+            <Route path="/registroproductos" element={<ProductRegister/>} />
             <Route path="/listaproductos" element={<ProductList/>} />
             <Route path="/scconfiguracion" element={<BusinessPartnersConfiguration />} />
             <Route path="/srconfiguracion" element={<DeliveryPartnersConfiguration />} />

@@ -20,9 +20,9 @@ const DeliveryPartnersViewTools = () => {
                         </form>
                     </div>
 
-                    <div className='m-3'/>
+                    <div className='m-3' />
 
-                    <table class="table">
+                    <table class="table m-3">
                         <thead>
                             <tr>
                                 <th scope="col">Cedula</th>
