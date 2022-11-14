@@ -56,12 +56,12 @@ const Login = () => {
 
                     <div className='form-control mb-3'>
 
-                        <div className='position-absolute pointer d-inline-flex mt-1 me-1'>
-                            <h3><FiMail /></h3>
+                        <div className='position-absolute pointer d-inline-flex'>
+                            <h3><FiMail/></h3>
                         </div>
                         <input
                             type="email"
-                            className='form-control d-inline-flex text-field'
+                            className='form-control d-inline-flex text-field ms-5'
                             placeholder='Correo Electrónico'
                             data-toggle='tooltip'
                             tooltiptext="Ingrese su correo electrónico"
@@ -71,19 +71,19 @@ const Login = () => {
 
                     <div className='form-control mb-3'>
 
-                        <div className='position-absolute pointer pwd-icon d-inline-flex mt-1 me-1'>
-                            <h3><FaKey /></h3>
+                        <div className='position-absolute pointer pwd-icon d-inline-flex mt-1'>
+                            <h3 className='me-5'><FaKey /></h3>
                         </div>
 
                         <input
                             type={showPassword ? "text" : "password"}
-                            className='form-control d-inline-flex text-field'
+                            className='form-control d-inline-flex text-field ms-5 me-1 w-75'
                             placeholder='Contraseña'
                             data-toggle='tooltip'
                             tooltiptext="Ingrese su contraseña"
                         />
 
-                        <div className='position-absolute pointer pwd-icon d-inline-flex mt-1 me-1' onClick={() => setShowPassword(!showPassword)}>
+                        <div className='position-absolute pointer pwd-icon d-inline-flex mt-1' onClick={() => setShowPassword(!showPassword)}>
                             {showPassword ? <h3><BiShow /></h3> : <h3><BiHide /></h3>}
                         </div>
 

@@ -6,7 +6,9 @@ import { RiUserSettingsLine } from 'react-icons/ri'
 import { FaUserEdit } from 'react-icons/fa'
 import { MdArticle, MdFavorite } from 'react-icons/md'
 
+
 const UserConfiguration = () => {
+
     return (
 
         <div className='m-3'>
