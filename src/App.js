@@ -1,15 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
-import UserRegister from './pages/userRegister'
-import UserConfiguration from './pages/userConfiguration'
-import BusinessPartnersConfiguration from './pages/businessPartnersConfiguration'
-import DeliveryPartnersConfiguration from "./pages/deliveryPartnersConfiguration";
-import BusinessPartnersRegister from './pages/businessPartnersRegister'
-import DeliveryPartnersRegister from './pages/deliveryPartnersRegister'
-import UserViewTools from './pages/userViewTools'
-import BusinessPViewTools from './pages/businessPViewTools'
-import DeliveryPViewTools from './pages/deliveryPViewTools'
+import UserRegister from './pages/UserRegister'
+import UserConfiguration from './pages/UserConfiguration'
+import BusinessPartnersConfiguration from './pages/BusinessPartnersConfiguration'
+import DeliveryPartnersConfiguration from "./pages/DeliveryPartnersConfiguration";
+import BusinessPartnersRegister from './pages/BusinessPartnersRegister'
+import DeliveryPartnersRegister from './pages/DeliveryPartnersRegister'
+import UserViewTools from './pages/UserViewTools'
+import BusinessPViewTools from './pages/BusinessPViewTools'
+import DeliveryPViewTools from './pages/DeliveryPViewTools'
+import DeliveryPartnersReports from './pages/DeliveryPartnersReports'
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
 import Home from "./testData/cards"
@@ -30,6 +31,7 @@ function App() {
             <Route path="/verusuario" element={<UserViewTools />} />
             <Route path="/versocioc" element={<BusinessPViewTools />} />
             <Route path="/versocior" element={<DeliveryPViewTools />} />
+            <Route path="/reporterepartidor" element={<DeliveryPartnersReports />} />
             <Route path="/home" element={<Home />} />
             <Route path="/configuracionusuario" element={<UserConfiguration />} />
             <Route path="/scconfiguracion" element={<BusinessPartnersConfiguration />} />
