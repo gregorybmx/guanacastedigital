@@ -55,4 +55,4 @@ const DeliveryPartnersReports = () => {
     )
 }
 
-export default DeliveryPartnersReports
+export default DeliveryPartnersReports;

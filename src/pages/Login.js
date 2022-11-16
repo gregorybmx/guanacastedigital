@@ -5,7 +5,6 @@ import { BiHide, BiShow } from 'react-icons/bi';
 import { FiMail } from 'react-icons/fi'
 import { FaKey } from 'react-icons/fa'
 import { ImGoogle3 } from 'react-icons/im'
-import { FaFacebook } from 'react-icons/fa'
 import GoogleLogin from 'react-google-login'
 import {gapi} from 'gapi-script'
 import FbLoginBtn from '../components/FbLoginBtn';
