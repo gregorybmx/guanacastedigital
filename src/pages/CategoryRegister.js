@@ -9,6 +9,7 @@ import logo from '../img/gd_logo.png'
 
 const CategoryRegister = () => {
 
+
     const navigate = useNavigate();
 
     const loginLink = () => {
