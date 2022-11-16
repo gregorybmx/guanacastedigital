@@ -18,6 +18,8 @@ const NavbarComponent = () => {
   const homeLink = () => {
     navigate("/");
   }
+
+
   return (
 
     <nav className="navbar navbar-expand-xl bg-green "  >
@@ -37,15 +39,16 @@ const NavbarComponent = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav-scroll">
           </ul>
           < ul className="navbar-nav mb-2 mb-lg-0">
-            <li className="nav-item">
-              <button className="nav-link  text-white" color="white" onClick={loginLink}>Iniciar Sesion</button>
-  </li>
-  <li className="nav-item" >
-    <button className="nav-link text-white" onClick={registerLink} >Registrarse</button>
-  </li>
-  <li className="nav-item">
-    <button className="nav-link text-white " href="#"><FiShoppingCart /></button>
-  </li>
+              <li className="nav-item">
+                <button className="nav-link  text-white" color="white" onClick={loginLink}>Iniciar Sesion</button>
+              </li>
+              <li className="nav-item" >
+                <button className="nav-link text-white" onClick={registerLink} >Registrarse</button>
+              </li>
+
+              <li className="nav-item">
+                <button className="nav-link text-white " href="#"><FiShoppingCart /></button>
+              </li>
           </ul >
         </div >
       </div >
