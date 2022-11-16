@@ -19,9 +19,7 @@ const NavbarComponent = () => {
     navigate("/");
   }
 
-  const categoryLink = () => {
-    navigate("vistacategoria");
-  }
+
   return (
 
     <nav className="navbar navbar-expand-xl bg-green "  >
@@ -47,10 +45,7 @@ const NavbarComponent = () => {
               <li className="nav-item" >
                 <button className="nav-link text-white" onClick={registerLink} >Registrarse</button>
               </li>
-              <li className="nav-item" >
-                <button className="nav-link text-white" onClick={categoryLink} >Registrar Categoria</button>
 
-              </li>
               <li className="nav-item">
                 <button className="nav-link text-white " href="#"><FiShoppingCart /></button>
               </li>

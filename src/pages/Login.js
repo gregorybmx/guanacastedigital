@@ -8,6 +8,8 @@ import { ImGoogle3 } from 'react-icons/im'
 import { FaFacebook } from 'react-icons/fa'
 import GoogleLogin from 'react-google-login'
 import {gapi} from 'gapi-script'
+import FbLoginBtn from '../components/FbLoginBtn';
+import * as storage from '../utils/storage';
 
 import logo from '../img/gd_logo.png'
 
@@ -16,6 +18,14 @@ const Login = () => {
     const [mensajeEmail, setMensajeEmail] = useState(true)
 
     const [showPassword, setShowPassword] = useState(false);
+
+    const [user, setUser] = useState(null);
+
+
+    const onLogin = (user) => {
+        storage.setUser(user);
+        setUser(user);
+    };
 
     const navigate = useNavigate();
 
@@ -33,6 +43,8 @@ const Login = () => {
         }
     }
 
+
+    //INICIO DE SESIÓN CON GOOGLE
     const responseGoogle=(responseGoogle)=>{
         console.log(responseGoogle)
         console.log(responseGoogle.profileObj);
@@ -142,25 +154,26 @@ const Login = () => {
 
                         <div className='d-flex justify-content-center'>
 
-                            <button
-                                className='logo-fb btn-link'
-                                href='fb'
-                                data-toggle='tooltip'
-                                title='Iniciar sesión con Facebook'><h1><FaFacebook /></h1></button>
+                            <FbLoginBtn onLogin={onLogin}/>
 
                             <button className='g-logo btn-link'
                                 href='google'
                                 data-toggle='tooltip'
-                                title='Iniciar sesión con Google'><h1><ImGoogle3 />  </h1>                                
+                                title='Iniciar sesión con Google'><h1><ImGoogle3 />  </h1>   
+                           
                             </button>
+                            
                             <div className='login'>
-                            <GoogleLogin 
+                
+                                <GoogleLogin 
                                 clientId={clientId}
                                 onSuccess={responseGoogle}
                                 onFailure={responseGoogle}
                                 cookiePolicy={'single_host_origin'} 
                                 />
-                            </div>
+                            </div>  
+                        
+                      
                         </div>
 
                         <p className='text-center'>
