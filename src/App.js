@@ -34,6 +34,7 @@ function App() {
             <Route path="/verusuario" element={<UserViewTools />} />
             <Route path="/versocioc" element={<BusinessPViewTools />} />
             <Route path="/versocior" element={<DeliveryPViewTools />} />
+            <Route path="/reporterepartidor" element={<DeliveryPartnersReports />} />
             <Route path="/home" element={<Home />} />
             <Route path="/registrocategoria" element={<CategoryRegister/>} />
             <Route path="/listacategorias" element={<CategoryList/>} />
