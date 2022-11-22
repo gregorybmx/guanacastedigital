@@ -78,6 +78,12 @@
     cursor: pointer;
 }
 
+.googleBtn{
+    border: none !important; 
+    background: none !important;
+    outline: none !important;
+}
+
 .g-logo {
     margin: 5px;
     color: #F34632;
