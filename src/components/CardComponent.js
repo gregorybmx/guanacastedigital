@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { BsFillSuitHeartFill } from "react-icons/bs";
 import "../css/cards.css"
 import ModalComponent from './ModalComponent'
 
@@ -30,7 +31,10 @@ function CardComponent({ title, category, imageSource, text, textM, textM2 }) {
         textButton = 'Mostrar Información'
         img = {<img src={imageSource} className="card-img-top-2 mb-5 w-100" alt='Imagen Card'></img>}
         title = {textM ? textM : "Lorem Ipsum."}
-        content = {textM2 ? textM2 : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "}>
+        content = {textM2 ? textM2 : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "}
+        buttonCloseText = "Cerrar"
+        buttonFunction = <button className='btn btn-danger  border-0 float-end'><BsFillSuitHeartFill /></button>
+        >
         </ModalComponent>
       </div>
 
