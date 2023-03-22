@@ -17,7 +17,7 @@ import BusinessPViewTools from './pages/businessPViewTools'
 import DeliveryPViewTools from './pages/deliveryPViewTools'
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
-import Home from "./testData/cards"
+import Home from "./pages/Home"
 import SalesReport from "./pages/SalesReportBPRegister";
 import SalesReportUpdate from "./pages/SalesReportBPUpdate";
 import SalesReportView from "./pages/SalesReportBPView";

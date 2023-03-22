@@ -1,7 +1,11 @@
 import React from "react";
+import ProductsList from "../api/Productos/ProductosListar";
+import ModalComponent from "../components/ModalComponent";
 import { FaClipboardList } from 'react-icons/fa';
 
 const ProductList = () => {
+
+    const [products] = ProductsList();
 
     return (
         <div className="m-3">
@@ -28,16 +32,26 @@ const ProductList = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>51019</td>
-                                <td>Hamburguesa</td>
-                                <td>¢1800</td>
-                                <td>Activo</td>
-                                <td>
-                                    <button type="button" className="btn btn-primary">Modificar</button>
-                                    <button type="button" className="btn btn-danger ms-2">Eliminar</button>
-                                </td>
-                            </tr>
+                            {products.map((prod) => (
+                                <tr>
+                                    <td>{prod.id}</td>
+                                    <td>{prod.nombre}</td>
+                                    <td>¢{prod.precio}</td>
+                                    <td>{prod.estado}</td>
+                                    <td>
+                                        <button type="button" className="btn btn-primary">Modificar</button>
+                                        <ModalComponent
+                                            classButton='btn btn-outline-danger rounded-0 text-white rounded-1 bg-danger mt-4'
+                                            textButton='Eliminar'
+                                            title = "Eliminar Producto"
+                                            content = '¿Realmente deseas eliminar el Producto?'
+                                            buttonCloseText = "Cancelar"
+                                            buttonFunction = {<button type="button" className="btn btn-danger">Eliminar</button>}
+                                        />
+                                    </td>
+                                </tr>
+                            ))}
+
                         </tbody>
                     </table>
                 </div>
