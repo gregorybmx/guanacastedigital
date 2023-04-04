@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import history from "./utils/History";
+
 import Login from './pages/Login';
 import UserRegister from './pages/UserRegister'
 import UserConfiguration from './pages/UserConfiguration'
@@ -24,7 +26,7 @@ import SalesReportView from "./pages/SalesReportBPView";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter history = {history}>
       <div className="App">
 
         <NavbarComponent />
@@ -56,7 +58,7 @@ function App() {
         <FooterComponent />
 
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
