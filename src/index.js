@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Auth0ProviderComponent from './components/Auth0ProviderComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css/animate.min.css';
 import './css/index.css';
@@ -15,9 +16,11 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Auth0ProviderComponent>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Auth0ProviderComponent>
 );
 
 reportWebVitals();
