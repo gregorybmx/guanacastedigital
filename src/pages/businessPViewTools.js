@@ -21,15 +21,15 @@ const BusinessPartnersViewTools = () => {
                     </div>
 
                     <div className='m-3'/>
-
+                    <div className="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Cedula</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellidos</th>
-                                <th scope="col">Correo Electronico</th>
-                                <th scope="col">Acciones</th>
+                                <th scope="col" className="col-2 col-md-1">Cedula</th>
+                                <th scope="col" className="col-4 col-md-3">Nombre</th>
+                                <th scope="col" className="col-12 col-md-12">Apellidos</th>
+                                <th scope="col" className="col-2 col-md-2">Correo Electronico</th>
+                                <th scope="col" className="col-6 col-md-6">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,7 +42,7 @@ const BusinessPartnersViewTools = () => {
                             </tr>
                         </tbody>
                     </table>
-
+                    </div>
                 </div >
             </div>
         </div >

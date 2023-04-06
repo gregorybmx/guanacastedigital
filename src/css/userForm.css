@@ -1,4 +1,6 @@
 .btn-reg{
     width: 40%;
-    font-weight: bold;    
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;  
 }

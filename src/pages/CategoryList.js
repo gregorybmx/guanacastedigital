@@ -18,6 +18,7 @@ const CategoryList = () => {
                         <input className="form-control me-2 text-center" type="search" placeholder="Buscar Categoria" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
+                    <div className="table-responsive">
                     <table className="table text-center">
                         <thead>
                             <tr>
@@ -41,6 +42,7 @@ const CategoryList = () => {
                             </tr>
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>

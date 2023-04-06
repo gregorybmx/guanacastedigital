@@ -21,7 +21,7 @@ const UserViewTools = () => {
                     </div>
 
                     <div className='m-3'/>
-
+                    <div className="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
@@ -40,7 +40,7 @@ const UserViewTools = () => {
                             </tr>
                         </tbody>
                     </table>
-
+                    </div>
                 </div >
             </div>
         </div >

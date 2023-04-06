@@ -21,24 +21,25 @@ const ProductList = () => {
                         <input className="form-control me-2 text-center" type="search" placeholder="Buscar Producto o Servicio" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
-                    <table className="table text-center">
+                    <div className="table-responsive">
+                    <table className="table table-fixed text-center">
                         <thead>
                             <tr>
-                                <th scope="col">Código</th>
-                                <th scope="col">Descripción</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Estado</th>
-                                <th scope="col">Acciones</th>
+                                <th scope="col" className="col-2 col-md-1">Código</th>
+                                <th scope="col" className="col-4 col-md-3">Descripción</th>
+                                <th scope="col" className="col-12 col-md-12">Precio</th>
+                                <th scope="col" className="col-2 col-md-2">Estado</th>
+                                <th scope="col" className="col-6 col-md-6">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             {products.map((prod) => (
                                 <tr>
-                                    <td>{prod.id}</td>
-                                    <td>{prod.nombre}</td>
-                                    <td>¢{prod.precio}</td>
-                                    <td>{prod.estado}</td>
-                                    <td>
+                                    <td className="col-2 col-md-1">{prod.id}</td>
+                                    <td className="col-4 col-md-3">{prod.nombre}</td>
+                                    <td className="col-12 col-md-12">¢{prod.precio}</td>
+                                    <td className="col-12 col-md-12">{prod.estado}</td>
+                                    <td className="col-6 col-md-6">
                                         <button type="button" className="btn btn-primary">Modificar</button>
                                         <ModalComponent
                                             classButton='btn btn-outline-danger rounded-0 text-white rounded-1 bg-danger mt-4'
@@ -54,6 +55,7 @@ const ProductList = () => {
 
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>

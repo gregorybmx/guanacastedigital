@@ -21,7 +21,7 @@ const DeliveryPartnersViewTools = () => {
                     </div>
 
                     <div className='m-3' />
-
+                    <div className="table-responsive">
                     <table class="table m-3">
                         <thead>
                             <tr>
@@ -42,7 +42,7 @@ const DeliveryPartnersViewTools = () => {
                             </tr>
                         </tbody>
                     </table>
-
+                    </div>
                 </div >
             </div>
         </div >
