@@ -1,7 +1,9 @@
 import React from "react";
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import history from "./utils/History";
+import { useAuth0 } from "@auth0/auth0-react";
 
+import CargandoComponent from "./components/CargandoComponent";
 import Login from './pages/Login';
 import UserRegister from './pages/UserRegister'
 import UserConfiguration from './pages/UserConfiguration'
@@ -23,10 +25,28 @@ import Home from "./pages/Home"
 import SalesReport from "./pages/SalesReportBPRegister";
 import SalesReportUpdate from "./pages/SalesReportBPUpdate";
 import SalesReportView from "./pages/SalesReportBPView";
+import VendorsList from "./pages/VendorsList";
 
 function App() {
+  const { isLoading, error } = useAuth0();
+
+  if (error) {
+    return <div>Parece que hubo un error... {error.message}</div>;
+  }
+
+  if (isLoading) {
+    return (
+    <div className={"container d-flex justify-content-center align-items-center h-100"}>
+      <div className="row">
+        <div>
+          <CargandoComponent />
+          <h3>INICIANDO SESIÓN ....</h3>
+        </div>
+      </div>
+    </div>)
+  }
   return (
-    <BrowserRouter history = {history}>
+    <BrowserRouter history={history}>
       <div className="App">
 
         <NavbarComponent />
@@ -37,22 +57,23 @@ function App() {
             <Route path="/registro" element={<UserRegister />} />
             <Route path="/bpregistro" element={<BusinessPartnersRegister />} />
             <Route path="/dpregistro" element={<DeliveryPartnersRegister />} />
-            <Route path="/verusuario" element={<UserViewTools />} />
-            <Route path="/versocioc" element={<BusinessPViewTools />} />
-            <Route path="/versocior" element={<DeliveryPViewTools />} />
-            <Route path="/reporterepartidor" element={<DeliveryPartnersReports/>} />
+            <Route path="/listausuario" element={<UserViewTools />} />
+            <Route path="/listaocioc" element={<BusinessPViewTools />} />
+            <Route path="/listasocior" element={<DeliveryPViewTools />} />
+            <Route path="/reporterepartidor" element={<DeliveryPartnersReports />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/registrocategoria" element={<CategoryRegister/>} />
-            <Route path="/listacategorias" element={<CategoryList/>} />
+            <Route path="/registrocategoria" element={<CategoryRegister />} />
+            <Route path="/listacategorias" element={<CategoryList />} />
             <Route path="/configuracionusuario" element={<UserConfiguration />} />
-            <Route path="/registroproductos" element={<ProductRegister/>} />
-            <Route path="/listaproductos" element={<ProductList/>} />
-            <Route path="/registrocategoria" element={<CategoryRegister/>} />
-            <Route path="/registroreporteventa" element={<SalesReport/>} />
-            <Route path="/actualizacionreporteventa" element={<SalesReportUpdate/>} />
-            <Route path="/vistareporteventa" element={<SalesReportView/>} />
+            <Route path="/registroproductos" element={<ProductRegister />} />
+            <Route path="/listaproductos" element={<ProductList />} />
+            <Route path="/registrocategoria" element={<CategoryRegister />} />
+            <Route path="/registroreporteventa" element={<SalesReport />} />
+            <Route path="/actualizacionreporteventa" element={<SalesReportUpdate />} />
+            <Route path="/vistareporteventa" element={<SalesReportView />} />
             <Route path="/scconfiguracion" element={<BusinessPartnersConfiguration />} />
             <Route path="/srconfiguracion" element={<DeliveryPartnersConfiguration />} />
+            <Route path="/listaproveedores" element={<VendorsList />} />
           </Routes>
         </div>
         <FooterComponent />

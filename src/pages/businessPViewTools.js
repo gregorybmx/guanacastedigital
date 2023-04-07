@@ -22,7 +22,7 @@ const BusinessPartnersViewTools = () => {
 
                     <div className='m-3'/>
 
-                    <table class="table">
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th scope="col">Cedula</th>
@@ -38,7 +38,7 @@ const BusinessPartnersViewTools = () => {
                                 <td>Tony</td>
                                 <td>Rugama Gómez</td>
                                 <td>tony@gmail.com</td>
-                                <td><button type="button" class="btn btn-danger">Eliminar Socio Comerciante</button></td>
+                                <td><button type="button" className="btn btn-danger">Eliminar Socio Comerciante</button></td>
                             </tr>
                         </tbody>
                     </table>

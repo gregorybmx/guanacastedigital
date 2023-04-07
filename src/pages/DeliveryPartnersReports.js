@@ -22,7 +22,7 @@ const DeliveryPartnersReports = () => {
 
                     <div className='m-3'/>
 
-                    <table class="table">
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th scope="col">Cedula</th>
@@ -44,7 +44,7 @@ const DeliveryPartnersReports = () => {
                                 <td>Krismar</td>
                                 <td>12/04/2023 11:30am</td>
                                 <td>12/04/2023 12:10pm</td>
-                                <td><button type="button" class="btn btn-danger">Eliminar Reporte</button></td>
+                                <td><button type="button" className="btn btn-danger">Eliminar Reporte</button></td>
                             </tr>
                         </tbody>
                     </table>

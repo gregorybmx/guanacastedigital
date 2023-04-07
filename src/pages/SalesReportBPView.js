@@ -21,7 +21,7 @@ const SalesReportBPView = () => {
     
                     <div className='m-3'/>
     
-                    <table class="table">
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
@@ -43,7 +43,7 @@ const SalesReportBPView = () => {
                                 <td>17.000</td>
                                 <td>N/A</td>
                                 <td>11-12-2000</td>
-                                <td><button type="button" class="btn btn-danger">Eliminar Reporte</button></td>
+                                <td><button type="button" className="btn btn-danger">Eliminar Reporte</button></td>
                             </tr>
                             <tr>
                                 <td>2</td>
@@ -53,7 +53,7 @@ const SalesReportBPView = () => {
                                 <td>200.000</td>
                                 <td>N/A</td>
                                 <td>11-12-2022</td>
-                                <td><button type="button" class="btn btn-danger">Eliminar Reporte</button></td>
+                                <td><button type="button" className="btn btn-danger">Eliminar Reporte</button></td>
                             </tr>
                             <tr>
                                 <td>3</td>
@@ -63,7 +63,7 @@ const SalesReportBPView = () => {
                                 <td>30.000</td>
                                 <td>N/A</td>
                                 <td>21-09-2011</td>
-                                <td><button type="button" class="btn btn-danger">Eliminar Reporte</button></td>
+                                <td><button type="button" className="btn btn-danger">Eliminar Reporte</button></td>
                             </tr>
                             <tr>
                                 <td>4</td>
@@ -73,7 +73,7 @@ const SalesReportBPView = () => {
                                 <td>10.000</td>
                                 <td>N/A</td>
                                 <td>30-10-2007</td>
-                                <td><button type="button" class="btn btn-danger">Eliminar Reporte</button></td>
+                                <td><button type="button" className="btn btn-danger">Eliminar Reporte</button></td>
                             </tr>
                             <tr>
                                 <td>5</td>
@@ -83,7 +83,7 @@ const SalesReportBPView = () => {
                                 <td>1000</td>
                                 <td>N/A</td>
                                 <td>09-03-2022</td>
-                                <td><button type="button" class="btn btn-danger">Eliminar Reporte</button></td>
+                                <td><button type="button" className="btn btn-danger">Eliminar Reporte</button></td>
                             </tr>
                             <tr>
                                 <td>6</td>
@@ -93,7 +93,7 @@ const SalesReportBPView = () => {
                                 <td>39.000</td>
                                 <td>N/A</td>
                                 <td>30-10-2000</td>
-                                <td><button type="button" class="btn btn-danger">Eliminar Reporte</button></td>
+                                <td><button type="button" className="btn btn-danger">Eliminar Reporte</button></td>
                             </tr>
                         </tbody>
                     </table>

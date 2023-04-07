@@ -1,16 +1,21 @@
 import React from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
+import { useLoginAPI } from '../hooks/usuarios/useLoginAPI';
+
 const PerfilUsuarioComponent = () => {
-    const { user, logout, getAccessTokenSilently} = useAuth0();
+    const now = new Date().toISOString();
+    const { user, logout, getAccessTokenSilently } = useAuth0();
 
     const usuario = {
-        id: user.sub,
-        nombre: user.given_name,
-        apellido: user.family_name,
-        email: user.email,
-        imagen: user.picture,
-        token: ''
+        V_ID: user.sub,
+        V_CORREO: user.email,
+        V_NOMBRE_COMPLETO: user.name,
+        V_IMAGEN_URL: user.picture,
+        V_FECHA_INGRESO: now,
+        V_ULTIMO_LOGGEO: now
     }
+
+    useLoginAPI(usuario);
 
     getToken();
 
@@ -23,11 +28,11 @@ const PerfilUsuarioComponent = () => {
     return (
         <div className="dropdown">
             <button className="nav-link text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src={usuario.imagen} alt={usuario.nombre + " " +  usuario.apellido} className='w-25' />
+                <img src={usuario.V_IMAGEN_URL} alt={usuario.V_NOMBRE_COMPLETO + " imagen de perfil"} className='w-25' />
 
             </button>
             <ul className="dropdown-menu">
-                <li className='text-center'><a className="dropdown-item" href="/">{usuario.nombre}</a></li>
+                <li className='text-center'><a className="dropdown-item" href="/">{usuario.V_NOMBRE_COMPLETO}</a></li>
                 <hr />
                 <li><a className="dropdown-item" href="/">Configuracion</a></li>
                 <li><a className="dropdown-item" href="/">Favoritos</a></li>

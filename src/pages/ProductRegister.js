@@ -15,17 +15,17 @@ const ProductRegister = () => {
                     <div className='title-underline text-center mb-3'></div>
                     <form>
                         <div className="mb-3 text-center">
-                            <label for="formFile" class="form-label">Seleccione el tipo:</label>
+                            <label for="formFile" className="form-label">Seleccione el tipo:</label>
                             <div className="mb-3 d-flex justify-content-center">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="tipo" onChange={()=>setType(true)} id="productRadio" checked/>
-                                    <label class="form-check-label" for="productRadio">
+                                <div className="form-check">
+                                    <input className="form-check-input" type="radio" name="tipo" onChange={()=>setType(true)} id="productRadio" checked/>
+                                    <label className="form-check-label" for="productRadio">
                                         Producto
                                     </label>
                                 </div>
                                 <div className="form-check ms-3">
-                                    <input class="form-check-input" type="radio" name="tipo" onChange={()=>setType(false)} id="serviceRadio"/>
-                                    <label class="form-check-label" for="serviceRadio">
+                                    <input className="form-check-input" type="radio" name="tipo" onChange={()=>setType(false)} id="serviceRadio"/>
+                                    <label className="form-check-label" for="serviceRadio">
                                         Servicio
                                     </label>
                                 </div>
@@ -52,7 +52,7 @@ const ProductRegister = () => {
                         </div>
 
                         <div className="mb-3">
-                            <label for="formFile" class="form-label">Seleccione una imagen para su producto</label>
+                            <label for="formFile" className="form-label">Seleccione una imagen para su producto</label>
                             <input className="form-control" type="file" id="formFile" />
                         </div>
 
@@ -67,17 +67,17 @@ const ProductRegister = () => {
                         </div>
 
                         <div className="mb-3 text-center">
-                            <label for="formFile" class="form-label">Disponibilidad</label>
+                            <label for="formFile" className="form-label">Disponibilidad</label>
                             <div className="mb-3 d-flex justify-content-center">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="disponibilidad" id="dispActiva" checked />
-                                    <label class="form-check-label" for="productRadio">
+                                <div className="form-check">
+                                    <input className="form-check-input" type="radio" name="disponibilidad" id="dispActiva" checked />
+                                    <label className="form-check-label" for="productRadio">
                                         Activa
                                     </label>
                                 </div>
                                 <div className="form-check ms-3">
-                                    <input class="form-check-input" type="radio" name="disponibilidad" id="serviceRadio" />
-                                    <label class="form-check-label" for="serviceRadio">
+                                    <input className="form-check-input" type="radio" name="disponibilidad" id="serviceRadio" />
+                                    <label className="form-check-label" for="serviceRadio">
                                         Inactiva
                                     </label>
                                 </div>
