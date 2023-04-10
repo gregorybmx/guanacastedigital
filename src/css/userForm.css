@@ -1,6 +1,15 @@
 .btn-reg{
     width: 40%;
+<<<<<<< HEAD
     font-weight: bold;
     display: flex;
     flex-direction: column;  
+=======
+    font-weight: bold;    
+}
+
+.link:hover{
+    cursor: pointer;
+    color:rgb(177, 177, 255)
+>>>>>>> greivin
 }

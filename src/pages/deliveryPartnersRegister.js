@@ -27,7 +27,7 @@ const DeliveryPartnersRegister = () => {
                     <div className='title-underline text-center mb-3'></div>
 
                     <div className="mb-3">
-                        <label for="formFile" class="form-label center">Elige una Foto</label>
+                        <label for="formFile" className="form-label center">Elige una Foto</label>
                         <input className="form-control" type="file" id="formFile" />
                     </div>
 

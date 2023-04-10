@@ -1,4 +1,6 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 import ReactDOM from 'react-dom/client';
 import Auth0ProviderComponent from './components/Auth0ProviderComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,7 +20,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Auth0ProviderComponent>
     <React.StrictMode>
+      <Provider store={store}>
       <App />
+      </Provider>
     </React.StrictMode>
   </Auth0ProviderComponent>
 );

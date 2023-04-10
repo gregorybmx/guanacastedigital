@@ -21,8 +21,13 @@ const BusinessPartnersViewTools = () => {
                     </div>
 
                     <div className='m-3'/>
+<<<<<<< HEAD
                     <div className="table-responsive">
                     <table class="table">
+=======
+
+                    <table className="table">
+>>>>>>> greivin
                         <thead>
                             <tr>
                                 <th scope="col" className="col-2 col-md-1">Cedula</th>
@@ -38,7 +43,7 @@ const BusinessPartnersViewTools = () => {
                                 <td>Tony</td>
                                 <td>Rugama Gómez</td>
                                 <td>tony@gmail.com</td>
-                                <td><button type="button" class="btn btn-danger">Eliminar Socio Comerciante</button></td>
+                                <td><button type="button" className="btn btn-danger">Eliminar Socio Comerciante</button></td>
                             </tr>
                         </tbody>
                     </table>

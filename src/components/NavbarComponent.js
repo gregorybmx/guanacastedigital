@@ -1,8 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
+import ModalComponent from './ModalComponent';
 import PerfilUsuarioComponent from './PerfilUsuarioComponent';
-import { FiShoppingCart } from "react-icons/fi";
+import { BsFillSuitHeartFill } from "react-icons/bs";
+
+
 
 const NavbarComponent = () => {
 
@@ -10,8 +13,12 @@ const NavbarComponent = () => {
 
   const navigate = useNavigate();
 
-  const registerLink = () => {
-    navigate("registro");
+  const registroLink = () => {
+    navigate("/registro")
+  }
+
+  const loginLink = () => {
+    navigate("/");
   }
 
   const homeLink = () => {
@@ -20,7 +27,7 @@ const NavbarComponent = () => {
 
   if (!isAuthenticated) {
     window.localStorage.clear();
-}
+  }
 
   return (
 
@@ -46,16 +53,53 @@ const NavbarComponent = () => {
                 <PerfilUsuarioComponent />
               </li>
               <li className="nav-item">
-                <button className="nav-link text-white " href="#"><FiShoppingCart /></button>
+                <ModalComponent
+                  classButton='nav-link text-white mt-2'
+                  textButton={<BsFillSuitHeartFill />}
+                  title="Favoritos"
+                  content={
+                    <div>
+                      <table className="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry the Bird</td>
+                            <td>Jacob</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  }
+                  buttonCloseText="Cerrar"
+                />
               </li>
             </ul >
             :
             < ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
-                <button className="nav-link text-white" color="white" onClick={() => loginWithRedirect()}>Iniciar Sesion</button>
+                <button className="nav-link text-white" color="white" onClick={loginLink}>Iniciar Sesion</button>
               </li>
               <li className="nav-item" >
-                <button className="nav-link text-white" onClick={registerLink} >Registrarse</button>
+                <button className="nav-link text-white" onClick={registroLink}>
+                  Registrarse
+                </button>
               </li>
             </ul >
           }
