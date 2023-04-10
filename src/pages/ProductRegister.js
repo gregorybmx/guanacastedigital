@@ -31,7 +31,7 @@ const ProductRegister = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="form-control mb-3">
+                        <div className="form-group mb-3">
                             <input
                                 type="text"
                                 className='form-control d-inline-flex text-field text-center'
@@ -41,7 +41,7 @@ const ProductRegister = () => {
                             />
                         </div>
 
-                        <div className="form-control mb-3">
+                        <div className="form-group mb-3">
                             <input
                                 type="text"
                                 className='form-control d-inline-flex text-field text-center'
@@ -51,12 +51,12 @@ const ProductRegister = () => {
                             />
                         </div>
 
-                        <div className="mb-3">
-                            <label for="formFile" className="form-label">Seleccione una imagen para su producto</label>
-                            <input className="form-control" type="file" id="formFile" />
+                        <div className="form-group  mb-3">
+                            <label for="formFile d-inline-flex text-field" className="form-label">Seleccione una imagen para su producto</label>
+                            <input className="form-control d-inline-flex text-field" type="file" id="formFile" />
                         </div>
 
-                        <div className="form-control mb-3">
+                        <div className="form-group mb-3">
                             <input
                                 type="text"
                                 className='form-control d-inline-flex text-field text-center'

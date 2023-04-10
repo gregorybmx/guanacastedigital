@@ -13,6 +13,10 @@ const NavbarComponent = () => {
 
   const navigate = useNavigate();
 
+  const registroLink = () => {
+    navigate("/registro")
+  }
+
   const homeLink = () => {
     navigate("/");
   }
@@ -89,7 +93,7 @@ const NavbarComponent = () => {
                 <button className="nav-link text-white" color="white" onClick={() => loginWithRedirect()}>Iniciar Sesion</button>
               </li>
               <li className="nav-item" >
-                <button className="nav-link text-white" onClick={() => loginWithRedirect({ screen_hint: 'signup' })}>
+                <button className="nav-link text-white" onClick={registroLink}>
                   Registrarse
                 </button>
               </li>

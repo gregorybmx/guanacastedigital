@@ -5,12 +5,11 @@ import { actualizarUsuario } from '../../redux/slices/usuarioSlice';
 export const useLoginAPI = (user) => {
 
     const dispatch = useDispatch();
-    const respuesta = dispatch(agregarUsuario(user));
-
-    if(respuesta !== 'Cliente registrado exitosamente.')
-    {
-        dispatch(actualizarUsuario(user));
-    }
-
-    //falta mostrar error
+    dispatch(agregarUsuario(user)).then((respuesta) => {
+        if(respuesta.payload !== 'Cliente registrado exitosamente.')
+        {
+            dispatch(actualizarUsuario(user));
+        }
+    
+    });    //falta mostrar error
 }

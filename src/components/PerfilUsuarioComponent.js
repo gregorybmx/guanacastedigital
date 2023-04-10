@@ -3,7 +3,9 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { useLoginAPI } from '../hooks/usuarios/useLoginAPI';
 
 const PerfilUsuarioComponent = () => {
-    const now = new Date().toISOString();
+    const now = new Date();
+    now.setHours(now.getHours() - 6);
+    const formattedDate = now.toISOString();
     const { user, logout, getAccessTokenSilently } = useAuth0();
 
     const usuario = {
@@ -11,8 +13,8 @@ const PerfilUsuarioComponent = () => {
         V_CORREO: user.email,
         V_NOMBRE_COMPLETO: user.name,
         V_IMAGEN_URL: user.picture,
-        V_FECHA_INGRESO: now,
-        V_ULTIMO_LOGGEO: now
+        V_FECHA_INGRESO: formattedDate,
+        V_ULTIMO_LOGGEO: formattedDate
     }
 
     useLoginAPI(usuario);

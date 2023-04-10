@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { createUsuario, getUsuarios, updateUsuario } from '../../api/guanacasteDigitalAPI';
+import { createUsuario, getUsuarios, updateUsuario, login } from '../../api/guanacasteDigitalAPI';
 
 const initialState = {
     usuarioList: [],
@@ -26,6 +26,14 @@ export const actualizarUsuario = createAsyncThunk(
     'usuario/actualizarUsuario',
     async (usuario) => {
         const response = await updateUsuario(usuario);
+        return response;
+    }
+)
+
+export const loginUser = createAsyncThunk(
+    'usuario/loginUser',
+    async (usuario) => {
+        const response = await login(usuario);
         return response;
     }
 )
@@ -60,6 +68,15 @@ export const usuarioSlice = createSlice({
             state.status = 'success';
         },
         [actualizarUsuario.rejected]: (state) => {
+            state.status = 'failed';
+        },
+        [loginUser.pending]: (state) => {
+            state.status = 'loading';
+        },
+        [loginUser.fulfilled]: (state) => {
+            state.status = 'success';
+        },
+        [loginUser.rejected]: (state) => {
             state.status = 'failed';
         }
     }

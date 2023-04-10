@@ -2,3 +2,8 @@
     width: 40%;
     font-weight: bold;    
 }
+
+.link:hover{
+    cursor: pointer;
+    color:rgb(177, 177, 255)
+}

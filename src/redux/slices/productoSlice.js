@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import {getProductos} from '../../api/guanacasteDigitalAPI'
+import { createProducto, getProductos } from '../../api/guanacasteDigitalAPI';
 
 const initialState = {
     productoList: [],
@@ -14,6 +14,13 @@ export const obtenerProducto = createAsyncThunk(
     }
 )
 
+export const agregarProducto = createAsyncThunk(
+    'producto/agregarProducto',
+    async (producto) => {
+        const response = await createProducto(producto);
+        return response;
+    }
+)
 export const productoSlice = createSlice({
     name: 'producto',
     initialState,
@@ -26,6 +33,15 @@ export const productoSlice = createSlice({
             state.status = 'success';
         },
         [obtenerProducto.rejected]: (state) => {
+            state.status = 'failed';
+        },
+        [agregarProducto.pending]: (state) => {
+            state.status = 'loading';
+        },
+        [agregarProducto.fulfilled]: (state) => {
+            state.status = 'success';
+        },
+        [agregarProducto.rejected]: (state) => {
             state.status = 'failed';
         }
     }
