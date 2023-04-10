@@ -17,6 +17,10 @@ const NavbarComponent = () => {
     navigate("/registro")
   }
 
+  const loginLink = () => {
+    navigate("/");
+  }
+
   const homeLink = () => {
     navigate("/");
   }
@@ -90,7 +94,7 @@ const NavbarComponent = () => {
             :
             < ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
-                <button className="nav-link text-white" color="white" onClick={() => loginWithRedirect()}>Iniciar Sesion</button>
+                <button className="nav-link text-white" color="white" onClick={loginLink}>Iniciar Sesion</button>
               </li>
               <li className="nav-item" >
                 <button className="nav-link text-white" onClick={registroLink}>
