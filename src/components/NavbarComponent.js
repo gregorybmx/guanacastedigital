@@ -18,7 +18,7 @@ const NavbarComponent = () => {
   }
 
   const loginLink = () => {
-    navigate("/");
+    navigate("/login");
   }
 
   const homeLink = () => {
