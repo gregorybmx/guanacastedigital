@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- carlos
+- greivin
 
 pool:
   vmImage: ubuntu-latest
